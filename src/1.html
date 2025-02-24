@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // var product = {
+      //   // uploadFileNames: ["test.jpg", "test2.jpg", "test3.jpg"],
+      //   green: { red: [11, 23, 45, 78, 99, 100] },
+      // };
+      // var xx = product.green.red;
+      // console.log(xx);
+
+      // var result2 = product.green.red.filter((i) => i > 50);
+      // console.log(result2);
+
+      //1) map사용
+      //   [ {홍길동:[1, 10],김:사랑1}
+      //     {홍길동:[2, 20],김:사랑2}
+      //     {홍길동:[3, 30],김:사랑3}
+      //     {홍길동:[4, 40],김:사랑4}
+      //     {홍길동:[5, 50],김:사랑5}]
+
+      // var product = [1, 2, 3, 4, 5];
+      // var result3 = product.map((i) => ({
+      //   홍길동: [i, i * 10],
+      //   김: "사랑" + i,
+      // }));
+      // console.log(result3);
+
+      //2) filtermap 사용
+      // [{짝수:[20,40]},
+      //  {홀수:[20,60,100]}]
+
+      // var eve = product.filter((i) => i % 2 == 0).map((i) => i * 10);
+      // var add = product.filter((i) => i % 2 == 1).map((i) => i * 20);
+      // var result4 = [{ 짝수: eve }, { 홀수: add }];
+      // console.log(result4);
+
+      //1) map 사용해서 [o] = [1,5,11,6]을 출력
+      // p = [
+      //   { a: [1, 2], b: [3, 4] },
+      //   { a: [5, 6], b: [5, 7] },
+      //   { a: [11, 12], b: [1, 2, 5] },
+      //   { a: [6, 7, 8], b: [3, 4, 5, 9] },
+      // ];
+
+      // var result5 = p.map((obj) => (obj.a[0]));
+      // console.log(result5);
+
+      // p = [
+      //   { a: [1,3], b: { t: 11 } },
+      //   { a: [2,5], b: { t: 23 } },
+      //   { a: [1,2], b: { t: -1 } },
+      //   { a: [5,6], b: { t: -3 } },
+      // ];
+
+      // var result6 = p.map((i => i.b.t));
+      // console.log(result6);
+
+      var t = [
+        [
+          [1, 2, 3],
+          [4, 5, 6],
+        ],
+        [
+          [5, 11, 7],
+          [-1, -2, -3],
+        ],
+        [
+          [1, 4, 8],
+          [-1, -5, -9],
+        ],
+      ];
+
+      var result7 = t.map((i) => i[1][2]);
+      console.log(result7);
+
+      var a = [
+        [
+          [
+            [1, [3, 3, 2], 2, 3],
+            [4, 5, 6],
+            [3, 3, 2],
+          ],
+        ],
+        [
+          [
+            [5, [3, 3, 2], 11, 17],
+            [-1, -2, -3],
+            [4, 5, 6],
+          ],
+        ],
+        [
+          [
+            [1, [3, 3, 2], 4, 8],
+            [-1, -5, -9],
+            [7, 8, 3],
+          ],
+        ],
+      ];
+
+      var result8 = a.map((i) => i[0][0][1][1]);
+      console.log(result8);
+    </script>
+  </body>
+</html>
