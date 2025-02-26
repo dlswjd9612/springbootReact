@@ -1,9 +1,8 @@
 import { Navigate, useParams } from "react-router-dom";
-import ModifyComponent from "../../components/products/ReadComponent";
+import ModifyComponent from "../../components/products/ModifyComponent";
 import { useCallback } from "react";
 
-
-const ReadPage = () => {
+const ModifyPage = () => {
   const { pno, page, size } = useParams();
 
   const moveToModify = useCallback(
@@ -26,7 +25,7 @@ const ReadPage = () => {
   );
 };
 
-export default ReadPage;
+export default ModifyPage;
 
 // const ReadPage = () => {
 //   const { pno } = useParams();
